@@ -1,0 +1,141 @@
+#include <iostream>
+
+using namespace std;
+
+ void obtieneAnyo (int &anyo , int &bueno  , int &malo) {
+
+  bueno = 0;
+  malo = 0;
+
+  do{
+
+    cout << " Introduce un año ( entre 1920 y 2022 ): ";
+    cin >> anyo;
+    bueno++;
+
+  if(( anyo < 1920 ) || ( anyo > 2022)){
+
+    cout << " Numero no valido, porfavor vuelva a introducirlo " << endl;
+    malo = bueno - malo;}
+
+
+} while (( anyo < 1920 ) || ( anyo > 2022));
+
+}
+
+ void sumaCifrasPares (int &sumapar, int anyo) {
+
+ int ultimo;
+
+ sumapar = 0;
+
+  while ( anyo > 0){
+
+   ultimo = anyo % 10;
+   anyo = anyo/10;
+
+  if ( ultimo % 2 == 0)
+
+   sumapar = ultimo + sumapar;}
+
+}
+
+void sumaCifrasImpares (int &sumaimpar , int anyo) {
+
+ int ultimo;
+
+  sumaimpar = 0;
+
+  while ( anyo > 0){
+
+   ultimo = anyo % 10;
+   anyo = anyo/10;
+
+  if ( ultimo % 2 != 0)
+
+   sumaimpar =  ultimo + sumaimpar;}
+
+}
+
+int calculaColor ( char &color , int sumapar , int sumaimpar){
+
+
+ if ( sumapar  == sumaimpar )
+
+  color = 'r';
+
+ else if ( sumapar > sumaimpar)
+
+  color = 'a';
+
+ else if (sumapar < sumaimpar)
+
+  color = 'v';
+
+
+  return (color);
+
+}
+
+int main () {
+
+    int anyo , sumapar , sumaimpar , nrojo = 0 , nverde = 0 , nazul = 0 , bueno  , malo;
+    char color , repetir;
+
+
+    do{
+
+        obtieneAnyo(anyo,bueno,malo);
+        sumaCifrasPares(sumapar,anyo);
+        sumaCifrasImpares(sumaimpar ,anyo);
+        calculaColor(color,sumapar,sumaimpar);
+
+
+    switch (color){
+
+        case 'r' :
+
+            cout << " Tu color es el rojo " << endl;
+            nrojo++;
+
+        break;
+
+        case 'a' :
+
+            cout << " Tu color es el azul " << endl;
+            nazul++;
+
+        break;
+
+        case 'v' :
+
+            cout << " Tu color es el verde " << endl;
+            nverde++;
+
+        break;}
+
+  cout << " Quieres seguir  ( s / n ): ";
+   cin >> repetir;
+
+  do{
+
+   if ( repetir != 's' && repetir != 'n'){
+
+   cout << " Porfavor introduce una caracter s o n " << endl;}
+
+} while ( repetir != 's' && repetir != 'n');
+
+}while ( repetir == 's');
+
+     cout << " -------- Informe --------- " << endl;
+
+     cout << " Intentos totales : " << bueno << endl;
+     cout << " Intentas validos : " << malo << endl;
+     cout << " Numero de rojos : " << nrojo << endl;
+     cout << " Numero de verdes : " << nverde << endl;
+     cout << " Numero de azules : " << nazul << endl;
+
+
+return 0;
+
+}
