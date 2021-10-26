@@ -1,0 +1,87 @@
+#include <iostream>
+
+using namespace std;
+
+
+void leePar (char &c1 , char &c2 , int &n) {
+
+cout << " Introduce un caracter: ";
+cin >> c1 ;
+
+cout << " Introduce otro caracter (R / V): ";
+cin >> c2;
+
+while (( c2 != 'r') && ( c2 != 'v')){
+
+cout << " caracter no valido, porfavor vuelva a introducirlo " << endl;
+
+cout << " Introduce otro caracter (R / V): ";
+cin >> c2;}
+
+
+cout << " Introduce un numero ( entre 4 y 20 ): ";
+cin >> n;
+
+
+while (( n < 4 ) || ( n > 20)){
+
+cout << " Numero no valido, porfavor vuelva a introducirlo " << endl;
+
+cout << " Introduce un numero ( entre 4 y 20 ): ";
+cin >> n;}
+
+}
+
+void dibuja ( int &numcaracteres , int &espacios, char c1, char c2 , int n){
+
+
+for (int i = 1 ; i<=n; i++){
+     for (int j = 1 ; j<=n; j++){
+         if ( i == 1 || i == n){
+             cout << c1;
+       } else{
+        
+            if ( j == 1 || j == n)
+            cout << c1;
+            
+            else if ( c2 == 'r')
+            cout << c1;
+            
+            else
+            cout << ' ';
+            }
+          }  
+            cout <<endl;
+            
+    }
+}
+
+int main () {
+
+ char c1 , c2;
+ int numcaracteres , espacios , n;
+ 
+ leePar(c1,c2,n);
+ dibuja(numcaracteres , espacios , c1 , c2 ,n);
+ 
+ 
+ if ( c2 == 'r'){
+ 
+ numcaracteres = n*n;
+ espacios = 0;
+ 
+cout << " El numero de caracteres dibujados es: " << numcaracteres << endl;
+cout << " El numero de  espacios dibujados es: " << espacios << endl;}
+
+else {
+
+numcaracteres = n*4 -4;
+espacios = n*n - numcaracteres;
+
+cout << " El numero de caracteres dibujados es: " << numcaracteres << endl;
+cout << " El numero de  espacios dibujados es: " << espacios << endl;}
+ 
+ return 0;
+ 
+ }
+ 
