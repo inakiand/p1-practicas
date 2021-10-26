@@ -1,0 +1,170 @@
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+
+using namespace std;
+
+void numRandom (int &n1 , int &n2 , int &n3){
+ 
+ int contador;
+
+do{
+
+ srand ( time(0));
+ 
+ 
+
+n1 = rand()%10;
+
+n2 = rand()%10;
+
+n3 = rand()%10;
+ 
+ } while ( n1 == n2 || n1 == n3 || n2 == n3);
+ 
+
+}
+ 
+
+ void numeroUsuario ( int &num1 , int &num2 , int &num3 ){
+ 
+  
+  do{
+  
+     cout << " Introduce un numero ( entre 0 y 9 ): ";
+     cin >> num1;
+     
+     while ( num1 < 0 || num1 > 9){
+    
+     cout << " Numero no valido , porfavor vuelva a introducirlo " << endl;
+    
+     cout << " Introduce un numero ( entre 0 y 9 ): ";
+     cin >> num1;}
+     
+     cout << " Introduce un numero ( entre 0 y 9 ): ";
+     cin >> num2;
+     
+    while ( num2 < 0 || num2 > 9){
+     
+    cout << " Numero no valido , porfavor vuelva a introducirlo " << endl;
+     
+     cout << " Introduce un numero ( entre 0 y 9 ): ";
+     cin >> num2;}
+     
+     cout << " Introduce un numero ( entre 0 y 9 ): ";
+     cin >> num3;
+     
+    while ( num3 < 0 || num3 > 9){
+
+     cout << " Numero no valido , porfavor vuelva a introducirlo " << endl;
+
+     cout << " Introduce un numero ( entre 0 y 9 ): ";
+     cin >> num3;}
+     
+
+   if ( num1 == num2 || num1 == num3 || num2 == num3 ){
+
+     cout << " porfavor introduzca 3 numeros diferentes " << endl;}
+ 
+  }while (num1 == num2 || num1 == num3 || num2 == num3);
+
+
+ }
+ 
+
+int main () {
+
+int n1 , n2 , n3 , num1 , num2 , num3;
+char repetir;
+
+
+numRandom(n1,n2,n3);
+
+do{
+
+numeroUsuario(num1,num2,num3);
+
+cout << num1 << num2 << num3;
+
+
+// Primer valor
+
+if ( n1 == num1){
+
+cout << " Verde ";}
+
+else if ( n1 == num2 || n1 == num3){
+
+cout << " Amarillo ";}
+
+else{
+
+cout << " Rojo ";}
+
+// Segundo valor
+
+if ( n2 == num2 ){
+
+cout << " Verde ";}
+
+else if ( n2 == num1 || n2 == num3){
+
+cout << " Amarillo ";}
+
+else{
+
+cout << " Rojo ";}
+
+// Tercer valor
+
+if ( n3 == num3){
+
+cout << " Verde ";}
+
+else if (n3 == num1 || n3 == num2){
+
+cout << " Amarillo ";}
+
+else{
+
+cout << "Rojo";}
+
+cout << endl;
+
+
+} while ( n1 != num1 || n2 != num2 || n3 != num3);
+
+
+cout << " Muy bien crack has ganado " << endl;
+
+cout << " Quieres seguir jugando ( s / n ): ";
+cin >> repetir;
+
+
+switch (repetir){
+
+    case 's' :
+       
+       cout << " Bienvenido a una nueva partida " << endl;
+       cout << " ------------------------------ " << endl;
+       main();
+       
+    break;
+       
+    case 'n' :
+      
+      cout << " Gracias por jugar , vuelva pronto " << endl;
+      cout << " --------------------------------- " << endl;
+      
+    break;
+    
+    default :
+      
+      cout << " Porfavor introduzca un valor valido n o s para finalizar el programa " << endl;
+      
+}
+
+
+return 0;
+
+}
