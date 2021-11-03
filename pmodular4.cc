@@ -4,6 +4,61 @@
 using namespace std;
 
 
+void pideFecha(int & , int & , int &);
+int sumaFecha( int  , int , int  , int );
+int muestra (int  , int  , int  , int  ,char );
+int informe(int  , int  , int );
+
+int main(){
+
+    int dia , mes ,anyo, numero ,nazul,nrojo,namarillo;
+    char respuesta , color;
+    
+    nrojo = 0;
+    nazul = 0;
+    namarillo = 0;
+    
+    do{
+    
+
+    pideFecha(dia,mes,anyo);
+    sumaFecha(dia,mes,anyo, numero);
+    muestra(numero , dia , mes , anyo , color);
+    
+    if ( color == 'r'){
+       
+       nrojo++;}
+       
+    else if (color == 'a'){
+    
+         nazul++;}
+        
+    else {
+        
+        namarillo++;}
+      
+    
+        do{
+    
+        cout << " Quiere seguir con el programa (s/n): ";
+        cin >> respuesta;
+    
+        if ( respuesta != 's' && respuesta != 'n')
+    
+        cout << " Parametro invalido introduzca un parameto s o n. " << endl;
+    
+        }while ( respuesta != 's' && respuesta != 'n');
+        
+    
+    }while (respuesta == 's');
+    
+    informe(nrojo,namarillo,nazul);
+    
+    return 0;
+}
+
+
+
 void pideFecha(int &dia , int &mes , int &anyo){
 
     do{
@@ -81,7 +136,7 @@ int sumaFecha( int dia , int mes, int anyo , int numero){
     return (numero);
 }
 
-int muestra (int numero , int dia , int mes , int anyo ,char &color){
+int muestra (int numero , int dia , int mes , int anyo ,char color){
 
 numero = sumaFecha(dia , mes , anyo ,numero);
 
@@ -107,6 +162,7 @@ switch (numero){
        color = 'v';
        
     break;
+
     
     }
 
@@ -118,7 +174,7 @@ return (color);
 
 int informe(int nrojo , int namarillo , int nazul){
 
-cout << nrojo << namarillo << nazul << endl;
+
 
     if (nrojo > nazul && nrojo > namarillo){
     
@@ -136,54 +192,3 @@ cout << nrojo << namarillo << nazul << endl;
 }
   
   
-int main(){
-
-    int dia , mes ,anyo, numero ,nazul,nrojo,namarillo;
-    char respuesta , color;
-    
-    nrojo = 0;
-    nazul = 0;
-    namarillo = 0;
-    
-    do{
-    
-
-    pideFecha(dia,mes,anyo);
-    sumaFecha(dia,mes,anyo, numero);
-    muestra(numero , dia , mes , anyo , color);
-    
-    if ( color == 'r'){
-       
-       nrojo++;}
-       
-    else if (color == 'a'){
-    
-         nazul++;}
-        
-    else {
-        
-        namarillo++;}
-      
-    
-        do{
-    
-        cout << " Quiere seguir con el programa (s/n): ";
-        cin >> respuesta;
-    
-        if ( respuesta != 's' && respuesta != 'n')
-    
-        cout << " Parametro invalido introduzca un parameto s o n. " << endl;
-    
-        }while ( respuesta != 's' && respuesta != 'n');
-        
-    
-    }while (respuesta == 's');
-    
-    informe(nrojo,namarillo,nazul);
-    
-    return 0;
-}
-
-
-
-
