@@ -2,24 +2,30 @@
 
 using namespace std;
 
- void obtieneAnyo (int &anyo , int &bueno  , int &malo) {
+ void obtieneAnyo (int &anyo , int &total  , int &valido) {
+ 
+ int malo;
 
-  bueno = 0;
-  malo = 0;
+  total = 0;
+  valido = 0;
 
   do{
 
     cout << " Introduce un año ( entre 1920 y 2022 ): ";
     cin >> anyo;
-    bueno++;
+    total++;
+    
 
   if(( anyo < 1920 ) || ( anyo > 2022)){
 
-    cout << " Numero no valido, porfavor vuelva a introducirlo " << endl;
-    malo = bueno - malo;}
-
-
+    cout << " Numero no valido, porfavor vuelva a introducirlo " << endl;}
+  
+  else if ( anyo > 1920 || anyo < 2022){
+     
+     valido++;}
+  
 } while (( anyo < 1920 ) || ( anyo > 2022));
+
 
 }
 
@@ -79,13 +85,13 @@ int calculaColor ( char &color , int sumapar , int sumaimpar){
 
 int main () {
 
-    int anyo , sumapar , sumaimpar , nrojo = 0 , nverde = 0 , nazul = 0 , bueno  , malo;
+    int anyo , sumapar , sumaimpar , nrojo = 0 , nverde = 0 , nazul = 0 , total  , valido ,buenot = 0 ,malot = 0;
     char color , repetir;
 
 
     do{
 
-        obtieneAnyo(anyo,bueno,malo);
+        obtieneAnyo(anyo,total,valido);
         sumaCifrasPares(sumapar,anyo);
         sumaCifrasImpares(sumaimpar ,anyo);
         calculaColor(color,sumapar,sumaimpar);
@@ -125,12 +131,15 @@ int main () {
 
 } while ( repetir != 's' && repetir != 'n');
 
+buenot = total + buenot;
+malot = valido + malot;
+
 }while ( repetir == 's');
 
      cout << " -------- Informe --------- " << endl;
 
-     cout << " Intentos totales : " << bueno << endl;
-     cout << " Intentas validos : " << malo << endl;
+     cout << " Intentos totales : " << buenot << endl;
+     cout << " Intentas validos : " << malot << endl;
      cout << " Numero de rojos : " << nrojo << endl;
      cout << " Numero de verdes : " << nverde << endl;
      cout << " Numero de azules : " << nazul << endl;
@@ -139,3 +148,4 @@ int main () {
 return 0;
 
 }
+
