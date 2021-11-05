@@ -7,7 +7,7 @@ using namespace std;
 void pideFecha(int & , int & , int &);
 int sumaFecha( int  , int , int  , int );
 int muestra (int  , int  , int  , int  ,char );
-int informe(int  , int  , int );
+void informe(int  , int  , int );
 
 int main(){
 
@@ -21,9 +21,12 @@ int main(){
     do{
     
 
-    pideFecha(dia,mes,anyo);
-    sumaFecha(dia,mes,anyo, numero);
-    muestra(numero , dia , mes , anyo , color);
+           pideFecha(dia,mes,anyo);
+  numero = sumaFecha(dia,mes,anyo, numero);
+  color =  muestra(numero , dia , mes , anyo , color);
+    
+    
+    cout << color << endl;
     
     if ( color == 'r'){
        
@@ -138,7 +141,6 @@ int sumaFecha( int dia , int mes, int anyo , int numero){
 
 int muestra (int numero , int dia , int mes , int anyo ,char color){
 
-numero = sumaFecha(dia , mes , anyo ,numero);
 
 switch (numero){
 
@@ -171,8 +173,7 @@ return (color);
 }
 
 
-
-int informe(int nrojo , int namarillo , int nazul){
+void informe(int nrojo , int namarillo , int nazul){
 
 
 
@@ -184,11 +185,22 @@ int informe(int nrojo , int namarillo , int nazul){
     
     cout << "El color mas repetido es el azul " << endl;}
     
-    else{
+    else if ( nrojo == nazul){
+    
+    cout << "El color mas repetido es el rojo " << endl;}
+    
+    else if ( namarillo == nazul){
     
     cout << "El color mas repetido es el amarillo " << endl;}
     
-    return 0;
+    else if ( namarillo == nrojo){
+    
+    cout << "El color mas repetido es el rojo " << endl;}
+    
+    else{
+    
+    cout << "El color mas repetido es el rojo " << endl;}
 }
+  
   
   
