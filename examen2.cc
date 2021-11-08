@@ -85,16 +85,15 @@ suma = 0;
     else
     
     suma = numero + suma;
-    
-    
+     
     
     }while(codigo > 0);
     
-   cout << suma << endl;
 
     return(suma);
   
 }
+
 
 void ComprobarEANCorrecto( int suma){
 
