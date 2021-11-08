@@ -77,7 +77,6 @@ suma = 0;
     contador++;
     
     
-    
     if ( contador % 2 == 0)
     
     suma = ( numero * 3) + suma;
@@ -85,11 +84,11 @@ suma = 0;
     else
     
     suma = numero + suma;
-     
+    
     
     }while(codigo > 0);
     
-
+    
     return(suma);
   
 }
