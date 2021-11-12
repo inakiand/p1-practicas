@@ -26,16 +26,19 @@ int digito;
 
 suma = 0;
 
-    if (n < 1){
+    if (n < 10){
     
-     cout << " ";}
+    cout << n%10;
+     suma = n;
+     
+     }
  
     else {
     
        digito = n%10;
        suma = (digito+mostrar(n/10));
        cout << " + ";
-       cout << digito << " ";}
+       cout << digito;}
        
     return suma;
 
