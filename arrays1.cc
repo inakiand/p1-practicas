@@ -8,17 +8,16 @@ using namespace std;
 
 
 void almacenar(int []);
-void sumarNumeros( int & , int & , int &, int & , int & , int & , int & , int & , int & , int & , int []);
-void dibuja( int  , int , int  , int  , int  , int  , int  , int  , int  , int );
+void sumarNumeros(  int & , int &, int & , int & , int & , int & , int & , int & , int & , int []);
+void dibuja( int , int  , int  , int  , int  , int  , int  , int  , int );
 
 
 
 int main(){
 
     int numeros [100];
-    int  c0 ,  c1 , c2 , c3 ,  c4 ,  c5 ,  c6 ,  c7 , c8 ,  c9;
+    int  c1 , c2 , c3 ,  c4 ,  c5 ,  c6 ,  c7 , c8 ,  c9;
 
-    c0 = 0;
     c1 = 0;
     c2 = 0;
     c3 = 0;
@@ -32,8 +31,8 @@ int main(){
         srand( time(NULL));
 
         almacenar(numeros);
-        sumarNumeros( c0 ,  c1 ,  c2 ,  c3 , c4 ,  c5 ,  c6 ,  c7 ,  c8 ,  c9 , numeros);
-        dibuja( c0 ,  c1 ,  c2 , c3 ,  c4 , c5 ,  c6 ,  c7 ,  c8 ,  c9);
+        sumarNumeros(   c1 ,  c2 ,  c3 , c4 ,  c5 ,  c6 ,  c7 ,  c8 ,  c9 , numeros);
+        dibuja(   c1 ,  c2 , c3 ,  c4 , c5 ,  c6 ,  c7 ,  c8 ,  c9);
 
     return 0;
 
@@ -50,13 +49,9 @@ void almacenar(int numeros [100]){
   
 }
 
-void sumarNumeros( int &c0 , int &c1 , int &c2 , int &c3 , int &c4 , int &c5 , int &c6 , int &c7 , int &c8 , int &c9 , int numeros[]){
+void sumarNumeros( int &c1 , int &c2 , int &c3 , int &c4 , int &c5 , int &c6 , int &c7 , int &c8 , int &c9 , int numeros[]){
  
     for(int i=0; i < 100; i++){
-    
-    if(numeros[i] == 0)
-    
-        c0++;
     
     if(numeros[i] == 1)
     
@@ -99,7 +94,7 @@ void sumarNumeros( int &c0 , int &c1 , int &c2 , int &c3 , int &c4 , int &c5 , i
 }
     
     
-void dibuja( int c0 , int c1 , int c2 , int c3 , int c4 , int c5 , int c6 , int c7 , int c8 , int c9){
+void dibuja( int c1 , int c2 , int c3 , int c4 , int c5 , int c6 , int c7 , int c8 , int c9){
 
     cout << " 9. ";
 
