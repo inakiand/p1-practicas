@@ -44,7 +44,7 @@ void almacenar(int numeros [100]){
 
     for(int i=0;i <100;i++){
 
-        numeros[i] = rand()%10;
+        numeros[i] = rand()%9 + 1;
     
     }
   
@@ -183,15 +183,8 @@ void dibuja( int c0 , int c1 , int c2 , int c3 , int c4 , int c5 , int c6 , int 
     }
     
         cout << endl;
-        cout << " 0. ";
-        
-    for(int i = 0; i < c0; i++){
-    
-        cout << "\u2587";
-        
-    }
-    
-        cout << endl;
-    
+
 } 
+
+
     
