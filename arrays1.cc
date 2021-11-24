@@ -104,7 +104,7 @@ void dibuja( int c0 , int c1 , int c2 , int c3 , int c4 , int c5 , int c6 , int 
     cout << " 9. ";
 
   
-    for(int i = 1; i < c9; i++){
+    for(int i = 0; i < c9; i++){
     
         cout << "\u2587";
         
@@ -113,7 +113,7 @@ void dibuja( int c0 , int c1 , int c2 , int c3 , int c4 , int c5 , int c6 , int 
         cout << endl;
         cout << " 8. ";
         
-    for(int i = 1; i < c8; i++){
+    for(int i = 0; i < c8; i++){
     
         cout << "\u2587";
         
@@ -122,7 +122,7 @@ void dibuja( int c0 , int c1 , int c2 , int c3 , int c4 , int c5 , int c6 , int 
         cout << endl;
         cout << " 7. ";
     
-    for(int i = 1; i < c7; i++){
+    for(int i = 0; i < c7; i++){
     
         cout << "\u2587";
         
@@ -131,7 +131,7 @@ void dibuja( int c0 , int c1 , int c2 , int c3 , int c4 , int c5 , int c6 , int 
         cout << endl;
         cout << " 6. ";
         
-    for(int i = 1; i < c6; i++){
+    for(int i = 0; i < c6; i++){
     
         cout << "\u2587";
         
@@ -140,7 +140,7 @@ void dibuja( int c0 , int c1 , int c2 , int c3 , int c4 , int c5 , int c6 , int 
         cout << endl;
         cout << " 5. ";
     
-    for(int i = 1; i < c5; i++){
+    for(int i = 0; i < c5; i++){
     
         cout << "\u2587";
         
@@ -149,7 +149,7 @@ void dibuja( int c0 , int c1 , int c2 , int c3 , int c4 , int c5 , int c6 , int 
         cout << endl;
         cout << " 4. ";
         
-    for(int i = 1; i < c4; i++){
+    for(int i = 0; i < c4; i++){
     
         cout << "\u2587";
         
@@ -158,7 +158,7 @@ void dibuja( int c0 , int c1 , int c2 , int c3 , int c4 , int c5 , int c6 , int 
         cout << endl;
         cout << " 3. ";
         
-     for(int i = 1; i < c3; i++){
+     for(int i = 0; i < c3; i++){
     
         cout << "\u2587";
         
@@ -167,7 +167,7 @@ void dibuja( int c0 , int c1 , int c2 , int c3 , int c4 , int c5 , int c6 , int 
         cout << endl;
         cout << " 2. ";
         
-    for(int i = 1; i < c2; i++){
+    for(int i = 0; i < c2; i++){
     
         cout << "\u2587";
         
@@ -176,7 +176,7 @@ void dibuja( int c0 , int c1 , int c2 , int c3 , int c4 , int c5 , int c6 , int 
         cout << endl;
         cout << " 1. ";
         
-    for(int i = 1; i < c1; i++){
+    for(int i = 0; i < c1; i++){
     
         cout << "\u2587";
         
@@ -185,7 +185,7 @@ void dibuja( int c0 , int c1 , int c2 , int c3 , int c4 , int c5 , int c6 , int 
         cout << endl;
         cout << " 0. ";
         
-    for(int i = 1; i < c0; i++){
+    for(int i = 0; i < c0; i++){
     
         cout << "\u2587";
         
